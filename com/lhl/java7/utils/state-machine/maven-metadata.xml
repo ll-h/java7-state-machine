@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.lhl.java7.utils</groupId>
+  <artifactId>state-machine</artifactId>
+  <versioning>
+    <release>0.2</release>
+    <versions>
+      <version>0.2</version>
+    </versions>
+    <lastUpdated>20170212222228</lastUpdated>
+  </versioning>
+</metadata>
