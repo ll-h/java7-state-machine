@@ -6,12 +6,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.lhl.java7.utils.OnEntryAndExitStateMachine;
-import com.lhl.java7.utils.OnEntryStateMachine;
-import com.lhl.java7.utils.OnExitStateMachine;
-import com.lhl.java7.utils.PerStateReactingStateMachine;
-import com.lhl.java7.utils.StateMachine;
-
 /**
  * Unit tests for {@link StateMachine} and its subclasses.
  */
@@ -188,13 +182,13 @@ public class StateMachineTests
 	private StateMachine<Integer> constructEntryAndExitBehavioredInfiniteStateMachine(
 			OnEntryAndExitStateMachine<Integer> newMachine)
 	{
-		newMachine.setEntryBehaviorForState(new Integer(2), new ChangeWitnessToConstant(witness, 2));
-		newMachine.setEntryBehaviorForState(new Integer(3), new ChangeWitnessToConstant(witness, 3));
-		newMachine.setEntryBehaviorForState(new Integer(5), new ChangeWitnessToConstant(witness, 5));
+		newMachine.addEntryBehavior(new Integer(2), new ChangeWitnessToConstant(witness, 2));
+		newMachine.addEntryBehavior(new Integer(3), new ChangeWitnessToConstant(witness, 3));
+		newMachine.addEntryBehavior(new Integer(5), new ChangeWitnessToConstant(witness, 5));
 		
-		newMachine.setExitBehaviorForState(new Integer(2), new ChangeWitnessToConstant(witness2, -2));
-		newMachine.setExitBehaviorForState(new Integer(3), new ChangeWitnessToConstant(witness2, -3));
-		newMachine.setExitBehaviorForState(new Integer(5), new ChangeWitnessToConstant(witness2, -5));
+		newMachine.addExitBehavior(new Integer(2), new ChangeWitnessToConstant(witness2, -2));
+		newMachine.addExitBehavior(new Integer(3), new ChangeWitnessToConstant(witness2, -3));
+		newMachine.addExitBehavior(new Integer(5), new ChangeWitnessToConstant(witness2, -5));
 
 		return newMachine;
 	}
