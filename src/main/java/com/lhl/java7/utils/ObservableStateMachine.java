@@ -42,7 +42,7 @@ public abstract class ObservableStateMachine<S> extends StateMachine<S> {
 		super(initialState);
 		this.collectionFactory = DEFAULT_BEHAVIOR_COLLECTION_FACTORY;
 	}
-	
+
 	/**
 	 * Creates an observable state machine that operates with the factory
 	 * provided as argument.

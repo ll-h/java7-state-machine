@@ -42,7 +42,7 @@ public class OnEntryAndExitStateMachine<S> extends ObservableStateMachine<S> {
 	{
 		super(initialState, behaviorsFactory);
 	}
-	
+
 	/**
 	 * @param initialState the initial state of the state machine.
 	 * @see PerStateReactingStateMachine#PerStateReactingStateMachine(Object)
@@ -62,7 +62,7 @@ public class OnEntryAndExitStateMachine<S> extends ObservableStateMachine<S> {
 			if(toRun != null)
 				for(Runnable functor : toRun)
 					functor.run();
-			
+
 			// Assign the new state
 			this.state = state;
 
@@ -91,7 +91,7 @@ public class OnEntryAndExitStateMachine<S> extends ObservableStateMachine<S> {
 
 		behaviors.add(behavior);
 	}
-	
+
 	/**
 	 * Adds a functor that will be run when this state machine enters the state
 	 * provided as argument.
@@ -103,7 +103,7 @@ public class OnEntryAndExitStateMachine<S> extends ObservableStateMachine<S> {
 	public void addEntryBehavior(S state, Runnable behavior) {
 		addBehavior(state, this.entryBehaviorsMap, behavior);
 	}
-	
+
 	/**
 	 * Adds a functor that will be run when this state machine leaves the state
 	 * provided as argument.

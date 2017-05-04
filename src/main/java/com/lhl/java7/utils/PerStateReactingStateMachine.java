@@ -30,7 +30,7 @@ public abstract class PerStateReactingStateMachine<S> extends StateMachine<S> {
 		super(initialState);
 		this.behaviors = behaviorsMap;
 	}
-	
+
 	/**
 	 * This constructor creates a <code>PerStateReactingStateMachine
 	 * </code> that uses a {@link java.util.HashMap} to store and
@@ -41,7 +41,7 @@ public abstract class PerStateReactingStateMachine<S> extends StateMachine<S> {
 	public PerStateReactingStateMachine(S initialState) {
 		this(initialState, new HashMap<S, Runnable>());
 	}
-	
+
 	/**
 	 * Sets the behavior that will be used for the state provided as 
 	 * argument to the <code>Runnable</code> provided as argument.
