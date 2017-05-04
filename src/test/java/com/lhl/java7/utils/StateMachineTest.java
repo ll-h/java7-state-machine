@@ -9,7 +9,7 @@ import org.junit.Test;
 /**
  * Unit tests for {@link StateMachine} and its subclasses.
  */
-public class StateMachineTests
+public class StateMachineTest
 {
 	private AtomicInteger witness = new AtomicInteger(0);
 	private AtomicInteger witness2 = new AtomicInteger(0);
